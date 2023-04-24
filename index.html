@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sudoku Solver</title>
+    <style>
+
+        body {
+            width: 100vw;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        canvas {
+            border: 1px solid black;
+            margin: 10px;
+            padding: 20px;
+            flex: 1;
+            
+        }
+
+        button {
+
+            background-color: rgb(0, 149, 255);
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+            color: white;
+
+        }
+
+        label {
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px;
+            background-color: rgb(0, 149, 255);
+            color: white;
+
+        }
+
+        select {
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px;
+            background-color: rgb(0, 149, 255);
+        }
+
+
+        .canvas-container{
+            display: flex;
+            flex-wrap: wrap;
+            width: 80vw;
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <h1>Sudoku Solver</h1>
+
+
+    <div class="dropdown">
+        <label for="difficulty">Difficulty</label>
+        <select name="difficulty" id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+
+        <label for="size">Size</label>
+        <select name="size" id="size">
+            <option value="4">4x4</option>
+            <option value="9">9x9</option>
+            <option value="16">16x16</option>
+            <option value="25">25x25</option>
+
+        </select>
+        <button id="generate">Generate Random</button>
+        <button id="solve">Solve</button>
+    </div>
+  
+    
+    
+    
+    <div class="canvas-container">
+        
+        <canvas id="sudokuCanvas" width="450" height="450"></canvas>
+
+        <canvas id="ansCanvas" width="450" height="450"></canvas>
+    </div>
+
+
+    <script src="app.js">  </script>
+</body>
+</
