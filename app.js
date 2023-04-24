@@ -100,19 +100,19 @@ let hard16 = [
 let easy25 = [
   [
     6, 7, 21, 1, 0, 0, 2, 3, 0, 10, 9, 0, 12, 0, 14, 15, 0, 0, 0, 19, 20, 0, 23,
-    24, 0
+    24, 0,
   ],
   [
     3, 14, 0, 2, 17, 0, 0, 5, 0, 0, 8, 0, 10, 0, 18, 20, 22, 0, 23, 0, 0, 19, 0,
-    0, 0
+    0, 0,
   ],
   [
     23, 0, 11, 13, 4, 0, 0, 14, 16, 0, 0, 20, 0, 0, 25, 1, 3, 2, 5, 21, 0, 7,
-    10, 17, 0
+    10, 17, 0,
   ],
   [
     0, 0, 19, 0, 9, 13, 0, 21, 0, 24, 0, 1, 0, 3, 0, 0, 0, 7, 10, 0, 8, 0, 14,
-    0, 16
+    0, 16,
   ],
   [
     10, 22, 0, 12, 0, 0, 0, 20, 0, 23, 6, 7, 15, 21, 0, 9, 0, 0, 11, 14, 0, 2,
@@ -416,7 +416,12 @@ function drawBoard(board) {
 
   for (let i = 0; i < N; i++) {
     for (let j = 0; j < N; j++) {
-      const value = board[i][j];
+      let value = board[i][j];
+      // if value greater that 9 , use a letter
+      if (value > 9) {
+        value = String.fromCharCode(value + 55);
+      }
+
       const x = j * cellSize;
       const y = i * cellSize;
 
@@ -475,12 +480,9 @@ generate.addEventListener("click", async () => {
     sudokuBoard = json.board;
 
     drawBoard(sudokuBoard);
-  }
-
-  else {
- 
+  } else {
     let boardname = difficulty + N;
-    console.log(boardname)
+    console.log(boardname);
 
     switch (boardname) {
       case "easy4":
@@ -503,7 +505,7 @@ generate.addEventListener("click", async () => {
         break;
       case "hard4":
         sudokuBoard = hard4;
-        break
+        break;
       case "hard16":
         sudokuBoard = hard16;
         break;
@@ -516,8 +518,6 @@ generate.addEventListener("click", async () => {
 
     console.log(sudokuBoard);
     drawBoard(sudokuBoard);
-
-     
   }
 
   //get the sudoku from the sudoku.json file
@@ -667,7 +667,13 @@ function solve(sudokuBoard) {
 
     for (let i = 0; i < ansN; i++) {
       for (let j = 0; j < ansN; j++) {
-        const value = graph.nodes[i * ansN + j].value;
+        let value = graph.nodes[i * ansN + j].value;
+
+        // if value greater that 9 , use a letter
+        if (value > 9) {
+          value = String.fromCharCode(value + 55);
+        }
+
         const x = j * ansCellSize;
         const y = i * ansCellSize;
 
@@ -678,11 +684,11 @@ function solve(sudokuBoard) {
         // Draw cell value
         if (value !== 0) {
           ansCtx.fillStyle = "black";
-          ansCtx.font = `${ansCellSize / 2}px Arial`;
+          ansCtx.font = `bold ${ansCellSize / 2}px Arial`;
           ansCtx.fillText(
             value.toString(),
-            x + ansCellSize / Math.sqrt(ansN),
-            y + ansCellSize / (Math.sqrt(ansN) / 2)
+            x + ansCellSize / 4,
+            y + ansCellSize / 1.5
           );
         }
 
