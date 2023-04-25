@@ -742,6 +742,10 @@ function solve(sudokuBoard) {
   console.log(graph.nodes);
 
   function drawAnsBoard(graph) {
+
+    //clear the canvas
+    ansCtx.clearRect(0, 0, ansCanvas.width, ansCanvas.height);
+
     const ansN = Math.sqrt(graph.nodes.length);
     const ansCellSize = ansCanvas.width / ansN;
 
