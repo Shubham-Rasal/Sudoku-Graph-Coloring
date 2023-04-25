@@ -50,43 +50,43 @@ let hard4 = [
 ];
 
 // easy 16x16
-let easy16 = [
-  [15, 12, 8, 0, 1, 0, 4, 3, 5, 0, 7, 10, 9, 13, 11, 14],
-  [5, 0, 3, 0, 0, 0, 0, 10, 11, 1, 0, 14, 0, 0, 16, 0],
-  [0, 0, 6, 13, 0, 0, 12, 0, 9, 4, 0, 0, 2, 1, 0, 0],
-  [0, 0, 0, 1, 11, 13, 0, 0, 0, 3, 8, 0, 0, 5, 7, 10],
-  [1, 2, 0, 0, 12, 14, 8, 13, 0, 9, 4, 0, 0, 0, 10, 0],
-  [0, 8, 7, 9, 0, 0, 0, 1, 12, 16, 0, 11, 14, 2, 5, 13],
-  [0, 0, 16, 11, 5, 6, 2, 0, 13, 0, 0, 15, 8, 0, 12, 0],
-  [0, 0, 14, 15, 0, 10, 16, 11, 3, 0, 5, 0, 7, 0, 1, 6],
-  [0, 1, 10, 0, 0, 0, 14, 8, 4, 0, 12, 0, 0, 15, 0, 0],
-  [3, 4, 9, 6, 16, 0, 0, 0, 10, 0, 0, 0, 12, 14, 13, 5],
-  [0, 16, 0, 12, 4, 15, 0, 6, 1, 7, 14, 3, 11, 10, 9, 2],
-  [0, 0, 0, 14, 10, 9, 0, 0, 6, 2, 0, 5, 0, 8, 4, 1],
-  [0, 3, 0, 4, 2, 0, 0, 0, 8, 12, 6, 13, 0, 0, 0, 16],
-  [0, 6, 0, 0, 0, 0, 0, 0, 15, 10, 9, 0, 13, 3, 0, 4],
-  [0, 14, 0, 7, 8, 12, 11, 4, 16, 5, 3, 1, 10, 6, 15, 0],
-  [16, 5, 15, 10, 0, 3, 6, 9, 0, 11, 2, 4, 0, 7, 8, 12],
-];
+// let easy16 = [
+//   [15, 12, 8, 0, 1, 0, 4, 3, 5, 0, 7, 10, 9, 13, 11, 14],
+//   [5, 0, 3, 0, 0, 0, 0, 10, 11, 1, 0, 14, 0, 0, 16, 0],
+//   [0, 0, 6, 13, 0, 0, 12, 0, 9, 4, 0, 0, 2, 1, 0, 0],
+//   [0, 0, 0, 1, 11, 13, 0, 0, 0, 3, 8, 0, 0, 5, 7, 10],
+//   [1, 2, 0, 0, 12, 14, 8, 13, 0, 9, 4, 0, 0, 0, 10, 0],
+//   [0, 8, 7, 9, 0, 0, 0, 1, 12, 16, 0, 11, 14, 2, 5, 13],
+//   [0, 0, 16, 11, 5, 6, 2, 0, 13, 0, 0, 15, 8, 0, 12, 0],
+//   [0, 0, 14, 15, 0, 10, 16, 11, 3, 0, 5, 0, 7, 0, 1, 6],
+//   [0, 1, 10, 0, 0, 0, 14, 8, 4, 0, 12, 0, 0, 15, 0, 0],
+//   [3, 4, 9, 6, 16, 0, 0, 0, 10, 0, 0, 0, 12, 14, 13, 5],
+//   [0, 16, 0, 12, 4, 15, 0, 6, 1, 7, 14, 3, 11, 10, 9, 2],
+//   [0, 0, 0, 14, 10, 9, 0, 0, 6, 2, 0, 5, 0, 8, 4, 1],
+//   [0, 3, 0, 4, 2, 0, 0, 0, 8, 12, 6, 13, 0, 0, 0, 16],
+//   [0, 6, 0, 0, 0, 0, 0, 0, 15, 10, 9, 0, 13, 3, 0, 4],
+//   [0, 14, 0, 7, 8, 12, 11, 4, 16, 5, 3, 1, 10, 6, 15, 0],
+//   [16, 5, 15, 10, 0, 3, 6, 9, 0, 11, 2, 4, 0, 7, 8, 12],
+// ];
 
 // medium 16x16
-let medium16 = [
-  [0, 14, 0, 0, 0, 5, 0, 4, 0, 7, 9, 10, 11, 13, 15, 0],
-  [7, 0, 0, 1, 3, 6, 0, 8, 0, 0, 13, 0, 5, 0, 0, 0],
-  [13, 0, 6, 0, 7, 10, 0, 0, 0, 0, 0, 15, 0, 2, 0, 8],
-  [16, 5, 0, 4, 0, 13, 0, 0, 8, 11, 1, 12, 0, 0, 7, 0],
-  [0, 0, 3, 0, 14, 7, 8, 0, 9, 6, 4, 0, 0, 0, 0, 0],
-  [4, 7, 0, 8, 0, 0, 6, 0, 0, 0, 0, 1, 0, 0, 0, 13],
-  [0, 0, 10, 0, 0, 0, 0, 0, 0, 14, 0, 3, 8, 0, 0, 9],
-  [12, 15, 14, 0, 10, 0, 9, 0, 0, 0, 0, 13, 0, 6, 11, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 13, 0, 0, 8, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 4, 8, 0],
-  [8, 12, 13, 0, 0, 14, 5, 2, 0, 0, 0, 0, 9, 0, 3, 0],
-  [0, 0, 16, 14, 0, 1, 0, 7, 0, 0, 0, 0, 15, 0, 13, 2],
-  [0, 8, 0, 10, 0, 12, 0, 11, 16, 0, 0, 4, 0, 15, 0, 14],
-  [0, 0, 12, 0, 16, 0, 0, 0, 14, 0, 0, 0, 7, 10, 0, 11],
-  [14, 0, 0, 0, 0, 15, 0, 10, 11, 12, 0, 0, 0, 0, 0, 6],
-  [11, 0, 5, 0, 0, 0, 0, 0, 0, 13, 0, 0, 3, 0, 0, 4],
+let easy16 = [
+  [0, 8, 4, 9, 0, 0, 0, 5, 0, 0, 10, 11, 12, 13, 0, 0],
+  [0, 13, 6, 0, 0, 0, 8, 10, 1, 0, 16, 12, 5, 0, 11, 14],
+  [3, 15, 5, 16, 0, 0, 0, 11, 2, 4, 13, 14, 1, 8, 10, 9],
+  [0, 0, 12, 0, 0, 13, 0, 16, 0, 3, 8, 9, 2, 0, 4, 7],
+  [0, 1, 0, 6, 0, 10, 5, 2, 0, 7, 0, 15, 14, 9, 0, 12],
+  [2, 5, 0, 0, 0, 11, 9, 4, 12, 16, 0, 3, 10, 0, 13, 6],
+  [9, 10, 0, 0, 0, 0, 6, 12, 0, 0, 0, 13, 0, 0, 3, 8],
+  [0, 0, 13, 14, 16, 0, 15, 0, 9, 0, 0, 10, 4, 0, 0, 0],
+  [5, 2, 1, 0, 0, 6, 10, 0, 11, 0, 0, 7, 16, 0, 0, 3],
+  [6, 4, 0, 7, 0, 0, 0, 1, 0, 12, 9, 0, 0, 10, 5, 13],
+  [10, 3, 9, 11, 0, 4, 0, 13, 15, 14, 0, 16, 0, 2, 8, 0],
+  [0, 16, 0, 13, 0, 5, 0, 9, 0, 10, 1, 0, 7, 11, 12, 4],
+  [8, 0, 2, 0, 10, 0, 0, 14, 16, 9, 0, 4, 0, 0, 1, 0],
+  [13, 9, 0, 1, 12, 0, 4, 6, 0, 11, 7, 5, 0, 16, 2, 0],
+  [16, 0, 0, 4, 5, 0, 13, 7, 10, 8, 3, 1, 9, 12, 6, 15],
+  [0, 7, 0, 0, 9, 16, 1, 0, 13, 2, 0, 0, 0, 4, 14, 0],
 ];
 
 // hard 16x16
@@ -392,7 +392,6 @@ let hard25 = [
 const generate = document.getElementById("generate");
 const s = document.getElementById("solve");
 const submit = document.getElementById("submit");
-const diff = document.getElementById("difficulty");
 const size = document.getElementById("size");
 
 const userSudoku = document.querySelector(".userSudoku");
@@ -434,11 +433,16 @@ let difficultyMap = {
 const colorList = [];
 
 for (let i = 0; i < 100; i++) {
-  colorList.push(
-    `rgb(${Math.floor(Math.random() * 255)},${Math.floor(
-      Math.random() * 255
-    )},${Math.floor(Math.random() * 255)})`
-  );
+
+  //generate random light colors
+  let r = Math.floor(Math.random() * 256);
+  let g = Math.floor(Math.random() * 256);
+  let b = Math.floor(Math.random() * 256);
+  let a = 0.8;
+
+  const color = "rgb(" + r + "," + g + "," + b + "," + a + ")";
+  colorList.push(color);
+
 }
 
 console.log(colorList);
@@ -476,7 +480,6 @@ function drawBoard(board) {
       if (value !== 0) {
         ctx.fillStyle = "black";
         ctx.font = `bold ${cellSize / 2}px Sans-Serif`;
-        console.log(cellSize);
         ctx.fillText(value.toString(), x + cellSize / 4, y + cellSize / 1.5);
       }
 
@@ -511,7 +514,9 @@ function getSudokuInput(N) {
     for (let j = 0; j < N; j++) {
       let cellId = "cell" + i + j;
       let cellValue = parseInt(document.getElementById(cellId).value);
-      if(cellValue == 16) {console.log("cellValue:", i , j, cellValue);}
+      if (cellValue == 16) {
+        console.log("cellValue:", i, j, cellValue);
+      }
       rowArray.push(cellValue);
     }
     sudokuArray.push(rowArray);
@@ -524,12 +529,10 @@ function getSudokuInput(N) {
 
 generate.addEventListener("click", async () => {
   const N = size.value;
-  const difficulty = diff.value;
-  console.log(N, difficulty);
 
   if (N == 9) {
     const sb = await fetch(
-      `https://sugoku.onrender.com/board?difficulty=${difficulty}`,
+      `https://sugoku.onrender.com/board?difficulty=hard`,
       //set no-cors mode to avoid CORS error
       {
         method: "GET",
@@ -543,13 +546,13 @@ generate.addEventListener("click", async () => {
     console.log(json);
     sudokuBoard = json.board;
 
-    // generateSudoku(N, sudokuBoard);
+    generateSudoku(N, sudokuBoard);
     sudo = sudokuBoard;
     console.log(sudo);
 
     drawBoard(sudokuBoard);
   } else {
-    let boardname = difficulty + N;
+    let boardname = "easy" + N;
     console.log(boardname);
 
     switch (boardname) {
@@ -588,7 +591,7 @@ generate.addEventListener("click", async () => {
     sudo = sudokuBoard;
     console.log(sudo);
 
-    console.log(sudokuBoard);
+    // console.log(sudokuBoard);
     drawBoard(sudokuBoard);
   }
 
@@ -643,6 +646,7 @@ function isValidSudoku(graph) {
   }
   return true;
 }
+let count = 0;
 
 function solve(sudokuBoard) {
   let graph = new Graph();
@@ -708,15 +712,14 @@ function solve(sudokuBoard) {
     }
     return true;
   }
-  let count = 0;
-  function solveSudoku(graph) {
-    if (count == 0) {
-      if (!isValidSudoku(graph)) return false;
-      count++;
-    }
 
-    // count++;
-    // console.log(count);
+  if (!isValidSudoku(graph)) {
+    alert("Invalid Sudoku Board");
+    return;
+  }
+
+  function solveSudoku(graph) {
+    count++;
     for (let i = 0; i < graph.nodes.length; i++) {
       let node = graph.nodes[i];
       if (node.value !== 0) continue;
@@ -799,7 +802,21 @@ function solve(sudokuBoard) {
 s.addEventListener("click", () => {
   console.log("solving");
   solve(sudokuBoard);
+  console.log(count);
 });
+
+//estimate computation time
+function estimateTime(sudo) {
+  let count = 0;
+  for (let i = 0; i < sudo.length; i++) {
+    for (let j = 0; j < sudo.length; j++) {
+      if (sudo[i][j] === 0) {
+        count++;
+      }
+    }
+  }
+  return count;
+}
 
 submit.addEventListener("click", () => {
   console.log("submitting");
@@ -807,6 +824,29 @@ submit.addEventListener("click", () => {
   //if the board is valid, congratulate the user
   //if the board is not valid, tell the user to try again
   sudo = getSudokuInput(sudo.length);
+
   console.log(sudo);
+
+  //show a solving animation
+  const loading = document.querySelector(".loading");
+  const loader = document.querySelector(".loader");
+  const canvas_container = document.querySelector(".canvas-container");
+  canvas_container.style.display = "none";
+  loader.style.display = "block";
+  loading.style.display = "block";
+
+  //estimate the time it will take to solve the sudoku board
+  const time = estimateTime(sudo);
+  console.log(time);
+
+  loader.innerHTML = `Estimated Time: ${time} seconds
+  <div class="loading"></div>`;
+
+  //solve the sudoku board
   solve(sudo);
+
+  //hide the solving animation
+  loading.style.display = "none";
+  loader.style.display = "none";
+  canvas_container.style.display = "block";
 });

@@ -161,8 +161,8 @@ class Sudoku {
 
 
 // Driver code
-let n = 25;
-let diff = 0.8;
+let n = 16;
+let diff = 0.4;
 let k = Math.floor(n * n * diff);
 let sudoku = new Sudoku(n, k);
 console.log(sudoku)
