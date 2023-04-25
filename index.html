@@ -19,33 +19,40 @@
             
         }
 
-        button {
+        .dropdown {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+        }
 
-            background-color: rgb(0, 149, 255);
+         label {
+            margin: 10px;
+
+        }
+
+       select , option  {
+            margin: 10px;
+            background-color: rgb(1, 102, 102);
+            color: white;
+            padding: 10px;
             border: none;
-            padding: 10px;
             border-radius: 5px;
+        }
+
+        button {
             margin: 10px;
-            cursor: pointer;
+            background-color: rgb(1, 178, 178);
             color: white;
-
-        }
-
-        label {
             padding: 10px;
+            border: none;
             border-radius: 5px;
-            margin: 10px;
-            background-color: rgb(0, 149, 255);
-            color: white;
-
         }
 
-        select {
-            padding: 10px;
-            border-radius: 5px;
-            margin: 10px;
-            background-color: rgb(0, 149, 255);
-        }
+      
+
+      
 
 
         .canvas-container{
@@ -78,36 +85,52 @@
 </head>
 <body>
 
-    <h1>Sudoku Solver</h1>
-
-    <h2>Enter Sudoku Puzzle</h2>
-
-<!-- Create a 9x9 grid of input fields for the Sudoku puzzle -->
+    <h1>Sudoku Solver</h1>    
     
-
-<!-- Add a button to submit the input and call a JavaScript function -->
-  
-
-
-
-
+    
+    
     <div class="dropdown">
-              
-
-        <label for="size">Size</label>
+        
+        
+        <label for="size">
+            <h3>
+                Size
+            </h3>
+        </label>
         <select  name="size" id="size">
             <option value="16">16x16</option>
             <option  value="9">9x9</option>
             <option value="4">4x4</option>
             <option  value="25">25x25</option>
-
+            
         </select>
+        
+        <label for="testcase">
+            <h3>
+                Testcase
+            </h3>
+        </label>
+        <select  name="testcase" id="testcase">
+            <option value="0">Random</option>
+            <option value="1">Testcase 1</option>
+            <option  value="2">Testcase 2</option>
+            <option value="3">Testcase 3</option>
+            <option  value="4">Testcase 4</option>
+            <option value="5">Testcase 5</option>
+            <option  value="6">Testcase 6</option>
+        </select>
+        
+        
+        
         <button id="generate">Generate Sudoku</button>
         <button id="solve">Solve</button>
-
-
-
+        
+        
+        
     </div>
+
+    <h2>Enter Sudoku Puzzle</h2>
+    
     <div class="">
         <div class="userSudoku">            
         </div>
@@ -127,7 +150,7 @@
         <canvas id="ansCanvas" width="450" height="450"></canvas>
     </div>
 
-
+    <script src="generate.js">  </script>
     <script src="app.js">  </script>
 
     

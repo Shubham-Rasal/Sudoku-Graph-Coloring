@@ -162,13 +162,13 @@ class Sudoku {
 
 // Driver code
 let n = 16;
-let diff = 0.4;
+let diff = 0.5;
 let k = Math.floor(n * n * diff);
 let sudoku = new Sudoku(n, k);
 console.log(sudoku)
 //copy the mat to a json file
 
-const fs = require('fs');
-let data = JSON.stringify(sudoku.mat);
-fs.writeFileSync('sudoku.json', data);
-console.log("JSON data is saved.")
+// const fs = require('fs');
+// let data = JSON.stringify(sudoku.mat);
+// fs.writeFileSync('sudoku.json', data);
+// console.log("JSON data is saved.")
