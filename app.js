@@ -444,7 +444,6 @@ for (let i = 0; i < 100; i++) {
   colorList.push(color);
 
 }
-
 console.log(colorList);
 
 // Canvas configuration
