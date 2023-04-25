@@ -11,6 +11,20 @@ let sudokuBoard = [
   [0, 0, 0, 0, 8, 0, 0, 7, 9],
 ];
 
+let test = [
+  [7, 0, 3, 0, 6, 0, 0, 8, 0],
+  [0, 0, 0, 0, 7, 2, 0, 0, 0],
+  [1, 0, 0, 0, 0, 4, 0, 0, 0],
+  [6, 0, 0, 0, 9, 0, 3, 0, 0],
+  [0, 0, 8, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 6],
+  [0, 0, 0, 0, 0, 0, 0, 7, 0],
+  [8, 0, 0, 0, 0, 0, 0, 2, 0],
+  [9, 0, 0, 4, 0, 5, 0, 0, 8],
+];
+
+let sudo = [];
+
 // easy 4x4
 let easy4 = [
   [4, 2, 0, 1],
@@ -377,8 +391,37 @@ let hard25 = [
 
 const generate = document.getElementById("generate");
 const s = document.getElementById("solve");
+const submit = document.getElementById("submit");
 const diff = document.getElementById("difficulty");
 const size = document.getElementById("size");
+
+const userSudoku = document.querySelector(".userSudoku");
+//generate blank sudoku
+function generateSudoku(N, randomBoard) {
+  userSudoku.innerHTML = "";
+
+  for (let i = 0; i < N; i++) {
+    for (let j = 0; j < N; j++) {
+      let input = document.createElement("input");
+      input.type = "number";
+      input.id = "cell" + i + j;
+      input.min = 1;
+      input.max = N;
+      input.defaultValue = 0;
+      input.style.width = "30px";
+      input.style.height = "30px";
+      input.style.textAlign = "center";
+      input.style.fontSize = "14px";
+      input.style.border = "1px solid black";
+      input.style.margin = "1px";
+      input.style.padding = "1px";
+      input.style.borderRadius = "5px";
+      userSudoku.appendChild(input);
+    }
+    let br = document.createElement("br");
+    userSudoku.appendChild(br);
+  }
+}
 
 let difficultyMap = {
   easy: 0.4,
@@ -458,6 +501,27 @@ function drawBoard(board) {
   }
 }
 
+function getSudokuInput(N) {
+  // Create a 2D array to store the Sudoku puzzle
+  let sudokuArray = [];
+
+  // Loop through each input field and retrieve the values
+  for (let i = 0; i < N; i++) {
+    let rowArray = [];
+    for (let j = 0; j < N; j++) {
+      let cellId = "cell" + i + j;
+      let cellValue = parseInt(document.getElementById(cellId).value);
+      if(cellValue == 16) {console.log("cellValue:", i , j, cellValue);}
+      rowArray.push(cellValue);
+    }
+    sudokuArray.push(rowArray);
+  }
+
+  // Print the 2D array to the console for testing
+  console.log("sudokuArray:", sudokuArray);
+  return sudokuArray;
+}
+
 generate.addEventListener("click", async () => {
   const N = size.value;
   const difficulty = diff.value;
@@ -478,6 +542,10 @@ generate.addEventListener("click", async () => {
     const json = await sb.json();
     console.log(json);
     sudokuBoard = json.board;
+
+    // generateSudoku(N, sudokuBoard);
+    sudo = sudokuBoard;
+    console.log(sudo);
 
     drawBoard(sudokuBoard);
   } else {
@@ -515,6 +583,10 @@ generate.addEventListener("click", async () => {
       default:
         sudokuBoard = easy4;
     }
+
+    generateSudoku(N, sudokuBoard);
+    sudo = sudokuBoard;
+    console.log(sudo);
 
     console.log(sudokuBoard);
     drawBoard(sudokuBoard);
@@ -564,6 +636,7 @@ function isValidSudoku(graph) {
       if (node.value == 0) continue;
       if (node.value === neighbor.value) {
         console.log(node, neighbor);
+        alert("Invalid Sudoku Board");
         return false;
       }
     }
@@ -620,8 +693,6 @@ function solve(sudokuBoard) {
 
   console.log(graph.nodes);
 
-  console.log(isValidSudoku(graph));
-
   //solve the sudoku board
   //use backtracking to solve the sudoku board
   //if the board is not valid, backtrack and try a different value
@@ -637,8 +708,15 @@ function solve(sudokuBoard) {
     }
     return true;
   }
-
+  let count = 0;
   function solveSudoku(graph) {
+    if (count == 0) {
+      if (!isValidSudoku(graph)) return false;
+      count++;
+    }
+
+    // count++;
+    // console.log(count);
     for (let i = 0; i < graph.nodes.length; i++) {
       let node = graph.nodes[i];
       if (node.value !== 0) continue;
@@ -721,4 +799,14 @@ function solve(sudokuBoard) {
 s.addEventListener("click", () => {
   console.log("solving");
   solve(sudokuBoard);
+});
+
+submit.addEventListener("click", () => {
+  console.log("submitting");
+  //check if the sudoku board is valid
+  //if the board is valid, congratulate the user
+  //if the board is not valid, tell the user to try again
+  sudo = getSudokuInput(sudo.length);
+  console.log(sudo);
+  solve(sudo);
 });
