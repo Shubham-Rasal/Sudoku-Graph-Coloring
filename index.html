@@ -64,6 +64,16 @@
 
     <h1>Sudoku Solver</h1>
 
+    <h2>Enter Sudoku Puzzle</h2>
+
+<!-- Create a 9x9 grid of input fields for the Sudoku puzzle -->
+    
+
+<!-- Add a button to submit the input and call a JavaScript function -->
+  
+
+
+
 
     <div class="dropdown">
         <label for="difficulty">Difficulty</label>
@@ -74,28 +84,33 @@
         </select>
 
         <label for="size">Size</label>
-        <select name="size" id="size">
+        <select  name="size" id="size">
             <option value="4">4x4</option>
-            <option value="9">9x9</option>
+            <option  value="9">9x9</option>
             <option value="16">16x16</option>
-            <option value="25">25x25</option>
+            <option  value="25">25x25</option>
 
         </select>
         <button id="generate">Generate Random</button>
         <button id="solve">Solve</button>
     </div>
+    <div class="">
+        <div class="userSudoku">            
+        </div>
+        <button id="submit">Submit</button>
+    </div>
   
     
     
     
-    <div class="canvas-container">
-        
+    <div class="canvas-container">        
         <canvas id="sudokuCanvas" width="450" height="450"></canvas>
-
         <canvas id="ansCanvas" width="450" height="450"></canvas>
     </div>
 
 
     <script src="app.js">  </script>
+
+    
 </body>
 </
